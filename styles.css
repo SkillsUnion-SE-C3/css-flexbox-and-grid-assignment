@@ -1,19 +1,25 @@
 .header {
   height: 80px;
   width: 100%;
-  background-color: #0e65c2;
+  background-color: #0c64c2;
   color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
 }
 
 .container {
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
 }
 
 .widget {
-  width: 25%;
-  height: 30%;
-  box-sizing: border-box;
-  position: absolute;
+  border: 1px #8bceec solid;
+  display: flexbox;
+  position: relative;
+  padding: 20px;
 }
 
 .widget-name {
@@ -26,4 +32,61 @@
 
 .widget-description {
   box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12;
+}
+
+.login {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 4/5;
+}
+#header {
+  position: relative;
+  left: 20px;
+}
+.button1 {
+  background-color: #0c64c2;
+  border: none;
+  color: white;
+  font-size: 12;
+}
+.button2 {
+  background-color: #ff9300;
+  border: none;
+  color: white;
+  font-size: 12;
+  padding: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 890px) {
+  .container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
