@@ -1,19 +1,42 @@
+body {
+  margin: 0;
+}
+
 .header {
   height: 80px;
   width: 100%;
-  background-color: #0e65c2;
+  background-color: #7cb0e7;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  display: inline;
+}
+
+button {
+  background-color: rgb(236, 151, 59);
+  color: rgba(240, 229, 224, 0.905);
+  border-radius: 25%;
+  padding: 5px 9px;
 }
 
 .container {
   padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .widget {
-  width: 25%;
-  height: 30%;
+  border: 1px solid #7cb0e7;
+
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
+  display: flexbox;
+  padding: 10px;
 }
 
 .widget-name {
